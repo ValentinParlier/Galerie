@@ -35,6 +35,7 @@ function generate_table() {
       var cellText = document.createElement("img");
       cellText.setAttribute('src', 'images/' + image[j]);
       cellText.setAttribute('class', 'images');
+      cellText.setAttribute('alt', image[j]);
       //cellText.setAttribute('src', 'https://pbs.twimg.com/profile_images/1253065166058655744/DfI9TE-i_400x400.jpg');
       cell.appendChild(cellText);
       row.appendChild(cell);
