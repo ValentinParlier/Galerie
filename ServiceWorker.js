@@ -1,27 +1,26 @@
-self.addEventListener('message', event => {
-    this.clients.matchAll()
-        .then(clients => {
-            clients.forEach(client => client.postMessage('Enchanté, je suis le service worker'));
-        });
+const cacheName = "Gallerie";
+
+const files = [
+    "/",
+    "style.css",
+    "https://fonts.googleapis.com/css2?family=Raleway&display=swap",
+    "script.js",
+    "https://sharp-panini-f8b745.netlify.app/bootstrap/4.5.2/css/bootstrap.min.css",
+];
+
+
+self.addEventListener("install", e => {
+    caches.open(cacheName).then(cache => {
+        cache.addAll(files);
+    });
 });
 
-
-self.addEventListener('fetch', event => {
-    event.RespondWith(new Response('PWA!!!!'));
-});
-
-
-self.addEventListener('install', event => {
-    event.waitUntil(Promise.resolve('Install phase succeed'));
-});
-
-
-/*self.addEventListener('activate', function(event){
-    event.waitUntil(…);
-});*/
-
-
-if (key !== cacheName) {
+self.addEventListener("activate", e => {
+    e.waitUntil(
+        caches.keys().then(function (keyList) {
+            return Promise.all(
+                keyList.map(function (key) {
+                    if (key !== cacheName) {
                         return caches.delete(key);
                     }
                 })
@@ -30,6 +29,9 @@ if (key !== cacheName) {
     );
 });
 
+self.addEventListener("fetch", e => {
+    console.log(e.request.url);
+});
 
 self.addEventListener("fetch", event => {
     const url = event.request.url;
@@ -60,29 +62,30 @@ self.addEventListener("fetch", event => {
                 }
             })
         );
-      } else {
-    event.respondWith(
-        caches
-            .open(cacheName)
-            .then(cache => cache.match(event.request))
-            .then(response => response || fetch(event.request))
-    );
-}
+
+    } else {
+        event.respondWith(
+            caches
+                .open(cacheName)
+                .then(cache => cache.match(event.request))
+                .then(response => response || fetch(event.request))
+        );
+    }
 });
 
 
 
 /*self.addEventListener('message', event => {
-this.clients.matchAll()
-    .then(clients => {
-        clients.forEach(client => client.postMessage('Enchanté, je suis le service worker'));
-    });
+    this.clients.matchAll()
+        .then(clients => {
+            clients.forEach(client => client.postMessage('Enchanté, je suis le service worker'));
+        });
 });
 
 self.addEventListener('fetch', event => {
-console.log('PWA!!!!');
+    console.log('PWA!!!!');
 });
 
 self.addEventListener('install', event => {
-event.waitUntil(Promise.resolve('Install phase succeed'));
+    event.waitUntil(Promise.resolve('Install phase succeed'));
 });*/
