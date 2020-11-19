@@ -57,9 +57,9 @@
         "purpose": "maskable"
       },
       {
-        "src": "images/icons/icon_144x144_Tommy.jpg",
+        "src": "images/icons/icon_144x144_Tommy.png",
         "sizes": "144x144",
-        "type": "image/jpg",
+        "type": "image/png",
         "purpose": "maskable"
       }
     ]
