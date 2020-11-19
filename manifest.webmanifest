@@ -1,60 +1,60 @@
 {
-    "name": "My Gallery - Joffrey",
-    "short_name": "MyGallery - J",
+    "name": "Galerie de Valentin",
+    "short_name": "MyGallery - V",
     "start_url": "/",
     "lang": "fr-FR",
     "orientation": "portrait",
     "display": "minimal-ui",
     "scope": "/",
-    "description": "Une simple présentation de ma Galerie d'images, par Joffrey",
+    "description": "Une simple présentation de ma Galerie d'images, par Valentin",
     "icons": [
-        {
-            "src": "images/icons/icon_gallerie_72x72.png",
-            "sizes": "72x72",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "images/icon_gallerie_128x128.png",
-            "sizes": "128x128",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "images/icon_gallerie_172x172.png",
-            "sizes": "172x172",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "images/icon_gallerie_200x200.png",
-            "sizes": "200x200",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "images/icon_gallerie_256x256.png",
-            "sizes": "256x256",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "images/icon_gallerie_300x300.png",
-            "sizes": "300x300",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "images/icon_gallerie_400x400.png",
-            "sizes": "400x400",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "images/icons/icon_gallerie_512x512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "maskable"
-        }
+      {
+        "src": "images/icons/icon_72x72_Mric.jpg",
+        "sizes": "72x72",
+        "type": "image/jpg",
+        "purpose": "maskable"
+      },
+      {
+        "src": "images/icons/icon_96x96_Valou.jpg",
+        "sizes": "96x96",
+        "type": "image/jpg",
+        "purpose": "maskable"
+      },
+      {
+        "src": "images/icons/icon_100x100_Mrwhite.PNG",
+        "sizes": "100x100",
+        "type": "image/PNG",
+        "purpose": "maskable"
+      },
+      {
+        "src": "images/icons/icon_120x120_Nemo.PNG",
+        "sizes": "120x120",
+        "type": "image/PNG",
+        "purpose": "maskable"
+      },
+      {
+        "src": "images/icons/icon_216x216_Mario.jpg",
+        "sizes": "216x216",
+        "type": "image/jpg",
+        "purpose": "maskable"
+      },
+      {
+        "src": "images/icons/icon_256x256_Jojo.jpg",
+        "sizes": "256x256",
+        "type": "image/jpg",
+        "purpose": "maskable"
+      },
+      {
+        "src": "images/icons/icon_420x420_Musk.jpg",
+        "sizes": "420x420",
+        "type": "image/jpg",
+        "purpose": "maskable"
+      },
+      {
+        "src": "images/icons/icon_512x512_theoffice.jpg",
+        "sizes": "512x512",
+        "type": "image/jpg",
+        "purpose": "maskable"
+      }
     ]
 }
