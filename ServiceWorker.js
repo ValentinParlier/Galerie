@@ -21,6 +21,68 @@ self.addEventListener('install', event => {
 });*/
 
 
+if (key !== cacheName) {
+                        return caches.delete(key);
+                    }
+                })
+            );
+        })
+    );
+});
+
+
+self.addEventListener("fetch", event => {
+    const url = event.request.url;
+
+    if (url.indexOf("https://sharp-panini-f8b745.netlify.app/GalleryRepo/images.json") === 0) {
+        event.respondWith(
+            fetch(event.request).then(response => {
+                if (response.status === 200) {
+                    console.info("Formatting data");
+                    return response.json().then(json => {
+                        const formattedResponse = json.map(j => ({
+                            src: j.src,
+                            alt: j.alt,
+                            title: j.title
+                        }));
+
+                        return new Response(JSON.stringify(formattedResponse));
+                    });
+
+                } else {
+                    console.error(
+                        "Service Worker",
+                        "Error when fetching",
+                        event.request.url
+                    );
+
+                    return response;
+                }
+            })
+        );
+      } else {
+    event.respondWith(
+        caches
+            .open(cacheName)
+            .then(cache => cache.match(event.request))
+            .then(response => response || fetch(event.request))
+    );
+}
+});
 
 
 
+/*self.addEventListener('message', event => {
+this.clients.matchAll()
+    .then(clients => {
+        clients.forEach(client => client.postMessage('Enchanté, je suis le service worker'));
+    });
+});
+
+self.addEventListener('fetch', event => {
+console.log('PWA!!!!');
+});
+
+self.addEventListener('install', event => {
+event.waitUntil(Promise.resolve('Install phase succeed'));
+});*/

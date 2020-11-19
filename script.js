@@ -38,6 +38,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 });
 
+if (navigator.onLine) {
+        console.log("online");
+    } else {
+        console.log("offline");
+    }
+
+    window.addEventListener("online", function (e) {
+        console.log("change online");
+    });
+
+    window.addEventListener("offline", function (e) {
+        console.log("change offline");
+    });
 
 /*let div_main = document.getElementById("main");
 
