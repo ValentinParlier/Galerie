@@ -55,6 +55,12 @@
         "sizes": "512x512",
         "type": "image/jpg",
         "purpose": "maskable"
+      },
+      {
+        "src": "images/icons/icon_144x144_Tommy.jpg",
+        "sizes": "144x144",
+        "type": "image/jpg",
+        "purpose": "maskable"
       }
     ]
 }
