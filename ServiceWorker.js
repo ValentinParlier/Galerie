@@ -3,7 +3,7 @@ const cacheName = "Gallerie";
 const files = [
     "/",
     "style.css",
-    "https://fonts.googleapis.com/css2?family=Raleway&display=swap",
+    "https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&display=swap",
     "script.js",
     "https://sharp-panini-f8b745.netlify.app/bootstrap/4.5.2/css/bootstrap.min.css",
 ];
