@@ -49,9 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
             window.addEventListener("offline", function (e) {
                 console.log("change offline");
             });
-
-
-
 });
 
 
