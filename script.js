@@ -42,7 +42,7 @@ function afficher(json){
                     <p class="subtitle is-6">@Parcourir</p>
                   </div>
                 </div>
-  
+
                 <div class="content">
                    ${repo.description}
                   <br />
@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let fetchData;
   if (navigator.onLine) {
-    fetchData = fetch("https://nostalgic-lamarr-5a666c.netlify.app/images.json")
+    fetchData = fetch("https://sharp-panini-f8b745.netlify.app/images.json")
       .then((response) => response.json())
       .then((data) => localforage.setItem("data", data));
-  } 
+  }
   else {
     fetchData = localforage.getItem("data");
   }

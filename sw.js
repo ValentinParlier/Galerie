@@ -33,7 +33,7 @@ self.addEventListener("fetch", e => {console.log(e.request.url);});
 self.addEventListener("fetch", event => {
   const url = event.request.url;
 
-  if (url.indexOf("https://nostalgic-lamarr-5a666c.netlify.app/images.json") === 0) {
+  if (url.indexOf("https://sharp-panini-f8b745.netlify.app/images.json") === 0) {
     event.respondWith(
       fetch(event.request).then(response => {
         if (response.status === 200) {
@@ -48,20 +48,20 @@ self.addEventListener("fetch", event => {
 			return new Response(JSON.stringify(formattedResponse));
 			});
         }
-		
+
 		else{
 			console.error(
 			"Service Worker",
-			"Error when fetching",			
+			"Error when fetching",
 			event.request.url
 			);
 
 			return response;
 		}
-        
+
       })
     );
-  } 
+  }
   else {
     event.respondWith(
       caches
