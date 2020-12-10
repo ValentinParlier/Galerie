@@ -1,0 +1,15 @@
+.title_font {
+    font-family: 'Zilla Slab', serif;
+}
+
+.on_hover_clickable:hover {
+    cursor: pointer;
+}
+
+.fav_icon {
+    cursor: pointer;
+}
+
+.fav_icon .fas {
+    color: red;
+}
