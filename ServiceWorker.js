@@ -41,7 +41,7 @@ self.addEventListener("fetch", e => {
 self.addEventListener("fetch", event => {
     const url = event.request.url;
 
-    if (url.indexOf("https://clever-roentgen-a7b6ea.netlify.app/GalleryRepo/images.json") === 0) {
+    if (url.indexOf("https://sharp-panini-f8b745.netlify.app/GalleryRepo/images.json") === 0) {
         event.respondWith(
             fetch(event.request).then(response => {
                 if (response.status === 200) {
@@ -78,4 +78,3 @@ self.addEventListener("fetch", event => {
         );
     }
 });
-

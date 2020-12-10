@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         getFavoris();
 
-        fetchData = fetch("https://clever-roentgen-a7b6ea.netlify.app/GalleryRepo/images.json")
+        fetchData = fetch("https://sharp-panini-f8b745.netlify.app/GalleryRepo/images.json")
             .then((response) => response.json())
             .then((data) => localforage.setItem("data", data))
             .catch((err) => console.log(err));
@@ -157,6 +157,3 @@ function sendNotif(message) {
         }
     }
 }
-
-
-
